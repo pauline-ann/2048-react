@@ -57,7 +57,7 @@ body {
   justify-content: space-between;
 }
 
-.resetButton {
+.reset-button {
   background-color: #3d2963;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -70,6 +70,21 @@ body {
     background-color: #d3386a;
     color: rgba(255, 255, 255, 1);
   }
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .score-header {
@@ -249,6 +264,12 @@ body {
   left: 0;
   z-index: 100;
   text-align: center;
+}
+
+.try-again-image {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .overlay .message {
