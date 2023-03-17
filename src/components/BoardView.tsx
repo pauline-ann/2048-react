@@ -42,6 +42,13 @@ const BoardView = () => {
 
     return (
         <div>
+            <div className='details-box'>
+                <div className='resetButton'>new game</div>
+                <div className='score-box'>
+                    <div className='score-header'>SCORE</div>
+                    <div>{board.score}</div>
+                </div>
+            </div>
             <div className='board'>
                 {cells}
                 {tiles}
