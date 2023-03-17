@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Press+Start+2P&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -22,8 +24,15 @@ body {
   align-items: center;
   font-family: "Clear Sans", sans-serif;
   font-size: 21px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+}
+
+.page-header {
+  font-size: 5em;
+  margin-top: -20px;
+  margin-bottom: 16px;
+  font-family: 'Pacifico';
 }
 
 .text {
@@ -58,13 +67,17 @@ body {
 }
 
 .reset-button {
-  background-color: #3d2963;
+  background-image: url(./assets/img/refresh.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   font-size: 25px;
   padding: 10px 20px;
   border-radius: 7px;
   transition: color 0.3s ease, background-color 0.3s ease;
+  height: 27px;
+  width: 10px;
 
   &:hover {
     background-color: #32ada9;
@@ -282,17 +295,32 @@ body {
   color: #666;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media only screen and (max-width: 450px) {
+  .page-header {
+    font-size: 4.5em;
+    margin-bottom: 10px;
   }
 
-  a:hover {
-    color: #747bff;
+  .text, .board {
+    width: 352px;
   }
 
-  button {
-    background-color: #f9f9f9;
+  .score-box {
+    min-width: 30px;
+    width: 56px;
+  }
+
+  .cell, .tile {
+    width: 80px;
+    height: 80px;
+    margin: 4px;
+  }
+
+  .try-again {
+    width: 80px;
+  }
+
+  .tryAgain {
+    width: 160px;
   }
 }
