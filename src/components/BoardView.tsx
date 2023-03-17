@@ -40,11 +40,15 @@ const BoardView = () => {
             return <Tile tile={tile} key={index} />
         })
 
+    const resetGame = () => {
+        setBoard(new Board())
+    }
+
     return (
         <div>
             <div className='details-box'>
-                <div className='resetButton'>new game</div>
-                <div className='score-box'>
+                <div className='reset-button no-select' onClick={() => resetGame()}>new game</div>
+                <div className='score-box no-select'>
                     <div className='score-header'>SCORE</div>
                     <div>{board.score}</div>
                 </div>
