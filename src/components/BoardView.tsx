@@ -4,31 +4,27 @@ import Cell from './Cell'
 import { Board } from '../util/gameLogic'
 import useEvent from '../hooks/useEvent'
 import Overlay from './Overlay'
+import { convertDirection } from '../util/convertDirection'
+import { useSwipeable } from 'react-swipeable'
 
 const BoardView = () => {
     const [board, setBoard] = useState(new Board())
+    const [test, setTest] = useState('hey')
 
-    // Converts key code for WASD and arrow keys to integer from 0 - 3
-    const convertDirection = (keyCode) => {
-        switch (keyCode) {
-            case 65:
-                return 0
-            case 37:
-                return 0
-            case 87:
-                return 1
-            case 38:
-                return 1
-            case 68:
-                return 2
-            case 39:
-                return 2
-            case 83:
-                return 3
-            case 40:
-                return 3
-        }
+    // update board according to what direction was pressed (or swiped if mobile)
+    const updateBoard = (direction) => {
+        let boardClone = Object.assign(Object.create(Object.getPrototypeOf(board)), board)
+        let newBoard = boardClone.move(direction) // move tiles to specified direction
+        setBoard(newBoard) // update board with new board
     }
+
+    // handle swipe on touch screen
+    const handlers = useSwipeable({
+        onSwipedLeft: () => updateBoard(0),
+        onSwipedUp: () => updateBoard(1),
+        onSwipedRight: () => updateBoard(2),
+        onSwipedDown: () => updateBoard(3),
+    })
 
     const handleKeyDown = (event) => {
         if (board.hasWon()) {
@@ -40,9 +36,7 @@ const BoardView = () => {
 
         if (isArrowKeys || isWASD) {
             let direction = convertDirection(event.keyCode)
-            let boardClone = Object.assign(Object.create(Object.getPrototypeOf(board)), board)
-            let newBoard = boardClone.move(direction) // move tiles to specified direction
-            setBoard(newBoard) // update board with new board
+            updateBoard(direction)
         }
     }
 
@@ -79,11 +73,12 @@ const BoardView = () => {
                     <div>{board.score}</div>
                 </div>
             </div>
-            <div className='board'>
+            <div className='board' {...handlers}>
                 {cells}
                 {tiles}
                 <Overlay onRestart={resetGame} board={board} />
             </div>
+            {test}
         </div>
     )
 }
