@@ -3,6 +3,7 @@ import Tile from './Tile'
 import Cell from './Cell'
 import { Board } from '../util/gameLogic'
 import useEvent from '../hooks/useEvent'
+import Overlay from './Overlay'
 
 const BoardView = () => {
     const [board, setBoard] = useState(new Board())
@@ -56,6 +57,7 @@ const BoardView = () => {
             <div className='board'>
                 {cells}
                 {tiles}
+                <Overlay onRestart={resetGame} board={board} />
             </div>
         </div>
     )
