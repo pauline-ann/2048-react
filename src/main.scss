@@ -35,12 +35,25 @@ body {
   margin: 0;
 }
 
-.page-header {
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.header {
   font-size: 5em;
-  margin-top: -20px;
-  margin-bottom: 16px;
+  margin-top: -55px;
+  margin-bottom: -10px;
   font-family: 'Pacifico';
   text-shadow: 5px 5px #3d2963;
+}
+
+.subheader {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
 }
 
 .text {
@@ -59,6 +72,7 @@ body {
   border-radius: 7px;
   outline: none;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .board .cell,
@@ -303,15 +317,34 @@ body {
   color: #666;
 }
 
+.devicon-github-original-wordmark {
+  font-size: 55px;
+}
+
 @media only screen and (max-width: 450px) {
-  .page-header {
-    font-size: 3.5em;
-    margin-bottom: 10px;
+  .header {
+    font-size: 4em;
+    margin-bottom: -5px;
+  }
+
+  .subheader {
+    font-size: 14px;
+  }
+
+  .details-box {
+    margin-top: -20px;
+    ;
   }
 
   .text,
-  .board {
+  .board,
+  .instructions {
     width: 352px;
+  }
+
+  .board {
+    margin-bottom: 10px;
+    height: 352px;
   }
 
   .score-box {
@@ -332,5 +365,9 @@ body {
 
   .tryAgain {
     width: 160px;
+  }
+
+  .devicon-github-original-wordmark {
+    font-size: 47px;
   }
 }
