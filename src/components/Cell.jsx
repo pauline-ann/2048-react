@@ -1,6 +1,6 @@
 const Cell = () => {
     return (
-        <div className="cell" />
+        <div className='cell' />
     )
 }
 

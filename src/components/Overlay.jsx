@@ -1,11 +1,11 @@
 const Overlay = ({ onRestart, board }) => {
     if (board.hasWon()) {
-        return <div className="tile2048" />
+        return <div className='tile2048' />
     }
 
     if (board.hasLost()) {
         return (
-            <div className="gameOver" onClick={() => onRestart()} />
+            <div className='gameOver' onClick={() => onRestart()} />
         )
     }
 
