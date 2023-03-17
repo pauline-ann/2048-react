@@ -1,7 +1,7 @@
 # 2048-react
-## A React clone of the [original 2048 game] by Gabriele Cirulli.
+## A [React clone] of the [original 2048 game] by Gabriele Cirulli.
 
-2048 is a game in which you merge like tiles together until you reach 2048. 2 and 2 combine to make 4, 4 and 4 combine to make 8, etc. If you run out of moves (the board is full and no tiles can be combined), it's game over. Playing this game was one of my favorite passtimes in college, I had a lot of fun recreating it! See how high you can score and have fun - [click here to try it].
+2048 is a game in which you merge like tiles together until you reach 2048. 2 and 2 combine to make 4, 4 and 4 combine to make 8, etc. If you run out of moves (the board is full and no tiles can be combined), it's game over. Playing this game was one of my favorite passtimes in college, I had a lot of fun recreating it! See how high you can score and have fun!
 
 ## How to Play
 On desktop, press the arrow keys or the WASD keys to move the tiles in the direction that is pressed.
@@ -57,5 +57,5 @@ yarn build
    [react-swipeable]: <https://www.npmjs.com/package/react-swipeable>
    [Sass]: <https://sass-lang.com/>
    [Vite]: <https://vitejs.dev/>
-   [click here to try it]: <https://main--silly-froyo-4c70a7.netlify.app/>
+   [React clone]: <https://main--silly-froyo-4c70a7.netlify.app/>
    
