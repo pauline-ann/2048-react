@@ -8,16 +8,41 @@ import Overlay from './Overlay'
 const BoardView = () => {
     const [board, setBoard] = useState(new Board())
 
+    // Converts key code for WASD and arrow keys to integer from 0 - 3
+    const convertDirection = (keyCode) => {
+        switch (keyCode) {
+            case 65:
+                return 0
+            case 37:
+                return 0
+            case 87:
+                return 1
+            case 38:
+                return 1
+            case 68:
+                return 2
+            case 39:
+                return 2
+            case 83:
+                return 3
+            case 40:
+                return 3
+        }
+    }
+
     const handleKeyDown = (event) => {
         if (board.hasWon()) {
             return
         }
 
-        if (event.keyCode >= 37 && event.keyCode <= 40) {
-            let direction = event.keyCode - 37
+        const isArrowKeys = event.keyCode >= 37 && event.keyCode <= 40
+        const isWASD = event.keyCode === 65 || event.keyCode === 87 || event.keyCode === 68 || event.keyCode === 83
+
+        if (isArrowKeys || isWASD) {
+            let direction = convertDirection(event.keyCode)
             let boardClone = Object.assign(Object.create(Object.getPrototypeOf(board)), board)
-            let newBoard = boardClone.move(direction)
-            setBoard(newBoard)
+            let newBoard = boardClone.move(direction) // move tiles to specified direction
+            setBoard(newBoard) // update board with new board
         }
     }
 
