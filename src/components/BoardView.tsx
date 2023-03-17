@@ -9,7 +9,6 @@ import { useSwipeable } from 'react-swipeable'
 
 const BoardView = () => {
     const [board, setBoard] = useState(new Board())
-    const [test, setTest] = useState('hey')
 
     // update board according to what direction was pressed (or swiped if mobile)
     const updateBoard = (direction) => {
@@ -78,7 +77,6 @@ const BoardView = () => {
                 {tiles}
                 <Overlay onRestart={resetGame} board={board} />
             </div>
-            {test}
         </div>
     )
 }
