@@ -25,6 +25,7 @@ const BoardView = () => {
         onSwipedDown: () => updateBoard(3),
     })
 
+    // handle button press
     const handleKeyDown = (event) => {
         if (board.hasWon()) {
             return
@@ -38,10 +39,9 @@ const BoardView = () => {
             updateBoard(direction)
         }
     }
-
     useEvent('keydown', handleKeyDown)
 
-    // Empty cells beneath Tiles
+    // cells are the boxes beneath tiles
     const cells = board.cells.map((row, rowIndex) => {
         return (
             <div key={rowIndex}>
@@ -52,7 +52,7 @@ const BoardView = () => {
         )
     })
 
-    // Filter through and return Tiles that aren't empty
+    // filter through and return Tiles that aren't empty
     const tiles = board.tiles
         .filter((tile) => tile.value !== 0)
         .map((tile, index) => {
