@@ -4,8 +4,8 @@
 2048 is a game in which you merge like tiles together until you reach 2048. 2 and 2 combine to make 4, 4 and 4 combine to make 8, etc. If you run out of moves (the board is full and no tiles can be combined), it's game over. Playing this game was one of my favorite passtimes in college, I had a lot of fun recreating it! See how high you can score and have fun!
 
 ## How to Play
-On desktop, press the arrow keys or the WASD keys to move the tiles in the direction that is pressed.
-On mobile, you may swipe to push the tiles in four directions.
+- On desktop, press the arrow keys or the WASD keys to move the tiles in the direction that is pressed.
+- On touch screen devices, the same may be achieved with swipe gestures.
 
 ## Tech
 
