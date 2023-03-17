@@ -1,7 +1,7 @@
 # 2048-react
 ## A [React clone] of the [original 2048 game] by Gabriele Cirulli.
 
-2048 is a game in which you merge like tiles together until you reach 2048. 2 and 2 combine to make 4, 4 and 4 combine to make 8, etc. If you run out of moves (the board is full and no tiles can be combined), it's game over. Playing this game was one of my favorite passtimes in college, I had a lot of fun recreating it! See how high you can score and have fun!
+2048 is a game in which you merge like tiles together until 2048 is reached. 2 and 2 combine to make 4, 4 and 4 combine to make 8, etc. If you run out of moves (the board is full and no tiles can be combined), it's game over. I played this game a lot when it first came out and I had a lot of fun recreating it. It was full of interesting problems to think about such the logic that comes to play when spawning new tiles, and merging them to create new ones.
 
 ## How to Play
 - On desktop, press the arrow keys or the WASD keys to move the tiles in the direction that is pressed.
