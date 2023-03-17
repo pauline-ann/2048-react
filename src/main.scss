@@ -6,7 +6,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #ffffffde;
   background-color: #57407c;
 
   font-synthesis: none;
@@ -14,6 +14,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -33,6 +40,7 @@ body {
   margin-top: -20px;
   margin-bottom: 16px;
   font-family: 'Pacifico';
+  text-shadow: 5px 5px #3d2963;
 }
 
 .text {
@@ -301,7 +309,8 @@ body {
     margin-bottom: 10px;
   }
 
-  .text, .board {
+  .text,
+  .board {
     width: 352px;
   }
 
@@ -310,7 +319,8 @@ body {
     width: 56px;
   }
 
-  .cell, .tile {
+  .cell,
+  .tile {
     width: 80px;
     height: 80px;
     margin: 4px;
